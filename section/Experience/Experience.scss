@@ -1,0 +1,48 @@
+@import "@/styles/variables.module.scss";
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3%;
+  h2 {
+    @include text_style_level_03_normal;
+  }
+  h3 {
+    margin-top: 5%;
+    @include text_style_navbar;
+  }
+  h5 {
+    margin-top: 5%;
+    border: 2px grey;
+    border-radius: 5px;
+    @include text_style_small_body_poppins_mobile;
+  }
+  .logos {
+    display: flex;
+    flex-direction: row;
+    img {
+      max-width: 130px;
+      height: auto;
+    }
+  }
+  .education {
+    position: relative;
+    left: -40%;
+    gap: 60px;
+  }
+  .skills {
+    position: relative;
+    top: 5%;
+    left: -40%;
+    gap: 60px;
+  }
+  .languages {
+    position: relative;
+    top: 10%;
+    left: -40%;
+    gap: 60px;
+  }
+}

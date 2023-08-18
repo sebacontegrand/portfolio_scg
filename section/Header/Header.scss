@@ -1,0 +1,64 @@
+@import "@/styles/variables.module.scss";
+
+#onlyone {
+  display: flex;
+  flex-direction: row;
+  min-width: 1563px;
+  .cvshot {
+    position: relative;
+
+    left: -410px;
+    margin-top: 4%;
+    border-radius: 20px;
+
+    img {
+      z-index: 0;
+    }
+  }
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 600px;
+    margin: 100px 60px;
+    z-index: 99;
+    .aboutme {
+      position: relative;
+      top: -15%;
+      span {
+        @include text_style_level_03_normal;
+      }
+    }
+    h1 {
+      position: relative;
+      top: -33%;
+      left: 1%;
+      color: white;
+      @include text_style_level_01_bold;
+    }
+    h2 {
+      position: relative;
+      top: -7%;
+      @include text_style_level_03_normal;
+    }
+    h3 {
+      position: relative;
+      top: -59px;
+      margin-left: 10px;
+      @include text_style_level_03_normal;
+    }
+    .contact {
+      position: relative;
+      top: -9%;
+      span {
+        @include text_style_level_03_normal;
+      }
+      h5 {
+        margin-top: 2%;
+        color: grey;
+        @include text_style_small;
+      }
+    }
+  }
+}

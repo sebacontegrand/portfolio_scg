@@ -1,0 +1,83 @@
+@import "@/styles/variables.module.scss";
+
+.navbar {
+  margin-top: 2%;
+  height: 133px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  gap: 20px;
+  h1 {
+    position: relative;
+    left: 0;
+    color: white;
+
+    width: 600px;
+    @include text_style_level_01_bold;
+  }
+  h2 {
+    color: white;
+    @include text_style_level_03_bold;
+  }
+  a {
+    gap: 20px;
+    @include text_style_subHeading_light_poppins;
+  }
+  .gap-4 {
+    gap: 9rem;
+  }
+}
+.navbar::before {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  width: 120vh;
+  height: 120vh;
+
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  animation: rotate 20s linear infinite;
+  border-radius: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) scale(4);
+  opacity: 35%;
+}
+.navbar:after {
+  box-shadow: inset 15px 15px 15px rgb(20, 20, 20);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.navbar .avatar {
+  position: relative;
+  top: 10%;
+  right: -100px;
+  &:hover {
+    border: 5px black;
+    box-shadow: 0px 8px 20px 0px rgba(0, 7, 16, 0.25); // Change the values as per your need
+  }
+}
+.shot {
+  border-radius: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.dropdown {
+  border-radius: 10px;
+  background: rgb(213, 215, 224);
+  @include text_style_medium_body_normal;
+}

@@ -1,0 +1,51 @@
+//Breakpoint variables
+$xxs: 360px;
+$xs: 440px;
+$s: 600px;
+$m: 768px;
+$d: 960px;
+$l: 1024px;
+$xl: 1280px;
+$xxl: 1440px;
+$xxxl: 1920px;
+
+//Mixins for breakpoints
+@mixin for-size($size) {
+  @if $size == xxs {
+    @media (max-width: $xxs) {
+      @content;
+    }
+  } @else if $size == xs {
+    @media (max-width: $xs) {
+      @content;
+    }
+  } @else if $size == s {
+    @media (max-width: $s) {
+      @content;
+    }
+  } @else if $size == m {
+    @media (max-width: $m) {
+      @content;
+    }
+  } @else if $size == d {
+    @media (max-width: $d) {
+      @content;
+    }
+  } @else if $size == l {
+    @media (max-width: $l) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media (min-width: $xxl) {
+      @content;
+    }
+  } @else if $size == xxxl {
+    @media (min-width: $xxxl) {
+      @content;
+    }
+  }
+}

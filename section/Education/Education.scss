@@ -1,0 +1,39 @@
+@import "@/styles/variables.module.scss";
+
+.work {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 6%;
+
+  h2 {
+    margin-top: 0%;
+    @include text_style_level_03_normal;
+  }
+  h3 {
+    margin-top: 1%;
+    @include text_style_navbar;
+  }
+  h5 {
+    margin-top: 2%;
+  }
+  .logos {
+    display: flex;
+    flex-direction: row;
+    img {
+      max-width: 130px;
+      height: auto;
+    }
+  }
+  .education {
+    width: 700px;
+  }
+  .logos {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 10px;
+  }
+}

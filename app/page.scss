@@ -1,0 +1,14 @@
+@import "@/styles/variables.module.scss";
+
+.rowdata {
+  display: flex;
+  flex-direction: row;
+  width: 3500px;
+  height: 800px;
+}
+@media screen and (max-width: 600px) {
+  .rowdata {
+    flex-direction: column;
+    width: 600px;
+  }
+}
