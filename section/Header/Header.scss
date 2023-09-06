@@ -99,9 +99,17 @@
       max-width: 414px;
       margin: 10px;
       z-index: 99;
+      .papple {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        margin-top: -55%;
+      }
       .aboutme {
         position: relative;
-        top: -15%;
+        top: 0%;
 
         span {
           @include text_style_level_03_normal;
@@ -119,21 +127,21 @@
       }
       h2 {
         position: relative;
-        top: -7%;
+        top: -2%;
         left: 0;
         @include text_style_navbar_light;
         color: #51617c;
       }
       h3 {
         position: relative;
-        top: -59px;
+        top: -26px;
         margin-left: 10px;
         @include text_style_navbar_light;
         color: #51617c;
       }
       .contact {
         position: relative;
-        top: -9%;
+        top: 7%;
         span {
           @include text_style_level_03_normal;
         }

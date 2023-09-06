@@ -2,6 +2,7 @@
 import Image from "next/image";
 import cv from "@/assets/img/365shots_so.png";
 import "./Header.scss";
+import papple from "@/assets/img/papple.jpeg";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import code from "@/assets/img/618shots_so.png";
 const Header = () => {
@@ -9,7 +10,14 @@ const Header = () => {
   return (
     <section id="onlyone">
       <div className="introduction">
-        <h1>Sebastián Conte-Grand </h1>
+        {isMobile ? (
+          <div className="papple">
+            <h1>Sebastián Conte-Grand </h1>
+            <Image src={papple} alt="" />
+          </div>
+        ) : (
+          <h1>Sebastián Conte-Grand </h1>
+        )}
         <div className="aboutme">
           <span>ABOUT ME</span>
           <hr />
