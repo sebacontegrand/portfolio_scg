@@ -14,6 +14,7 @@ import Image from "next/image";
 import photoId from "@/assets/img/402shots_so.png";
 import "./NavBar.scss";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { useEffect } from "react";
 const Home = () => {
   const handleAboutClick = () => {
     const aboutSection = document.getElementById("onlyone");
@@ -22,6 +23,9 @@ const Home = () => {
     }
   };
   const isMobile = useMediaQuery("(max-width: 600px)");
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       {!isMobile ? (
