@@ -82,7 +82,17 @@
   @include text_style_medium_body_normal;
 }
 @media screen and (max-width: 600px) {
-  .navbar {
-    width: 414px;
+  .navbarmobile {
+    margin-top: 2%;
+    height: 133px;
+    position: relative;
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    gap: 20px;
+    max-width: 414px;
   }
 }

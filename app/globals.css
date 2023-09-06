@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --body-width-desktop: 3500px;
+  --body-width-mobile: 414px;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -17,7 +19,7 @@
 }
 
 body {
-  width: 3500px;
+ 
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,4 +27,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+@media (max-width: 414px) {
+  body {
+    width: var(--body-width-mobile);
+  }
+}
+
+@media (min-width: 415px) {
+  body {
+    width: var(--body-width-desktop);
+  }
 }

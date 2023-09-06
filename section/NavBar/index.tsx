@@ -49,7 +49,7 @@ const Home = () => {
           </NavbarContent>
         </Navbar>
       ) : (
-        <Navbar className="navbar">
+        <Navbar className="navbarmobile">
           <NavbarBrand>
             <h2>Portfolio</h2>
           </NavbarBrand>

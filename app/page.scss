@@ -10,6 +10,6 @@
   .rowdata {
     display: flex;
     flex-direction: column;
-    width: 414px !important;
+    max-width: 414px !important;
   }
 }
