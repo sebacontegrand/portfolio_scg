@@ -27,8 +27,8 @@
       position: relative;
       top: -15%;
       span {
-        @include text_style_navbar_light;
-        color: grey;
+        @include text_style_level_03_normal;
+        color: #51617c;
       }
     }
     h1 {

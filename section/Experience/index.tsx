@@ -42,7 +42,7 @@ const index = () => {
       <div className="languages">
         <h2>LANGUAGES</h2>
         <hr />
-        <h3>• English: C2 • French: fluent spoken and written.</h3>
+        <h3>• English: C2 Advanced • French: fluent spoken and written.</h3>
       </div>
     </section>
   );
