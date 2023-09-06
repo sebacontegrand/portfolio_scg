@@ -37,3 +37,29 @@
     margin: 10px;
   }
 }
+@media screen and (max-width: 600px) {
+  .work {
+    display: flex;
+    flex-direction: column;
+    width: 414px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0%;
+    background: rgb(8, 27, 57);
+    color: #51617c;
+    h2 {
+      margin-top: 5%;
+      margin-left: 2%;
+      @include text_style_subHeading_light_poppins;
+    }
+    h3 {
+      width: 380px;
+      margin-top: 1%;
+      margin-left: 2%;
+      @include text_style_navbar_light;
+    }
+    h5 {
+      margin-top: 2%;
+    }
+  }
+}

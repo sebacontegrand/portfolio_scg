@@ -11,7 +11,7 @@ import {
   DropdownMenu,
 } from "@nextui-org/react";
 import Image from "next/image";
-import scg from "../../assets/img/217shots_so.png";
+import photoId from "@/assets/img/402shots_so.png";
 import "./NavBar.scss";
 const Home = () => {
   const handleAboutClick = () => {
@@ -39,29 +39,9 @@ const Home = () => {
             <Link onClick={handleAboutClick}>About Me</Link>
           </NavbarItem>
         </NavbarContent>
-      </NavbarContent>
-
-      <NavbarContent>
-        <Dropdown placement="bottom-end">
-          <DropdownTrigger className="avatar">
-            <Image className="shot" src={scg} alt="" width={300} height={200} />
-          </DropdownTrigger>
-          <DropdownMenu className="dropdown">
-            <DropdownItem key="profile" className="h-20 gap-4">
-              <p className="font-semibold">Signed in as</p>
-              <p className="font-semibold">sebacontegrand@gmail.com</p>
-            </DropdownItem>
-            <DropdownItem key="settings">Works</DropdownItem>
-            <DropdownItem key="team_settings">Experiences</DropdownItem>
-            <DropdownItem key="analytics">Studies</DropdownItem>
-            <DropdownItem key="system">About me</DropdownItem>
-            <DropdownItem key="configurations">Configurations</DropdownItem>
-            <DropdownItem key="help_and_feedback">Contact</DropdownItem>
-            <DropdownItem key="logout" color="danger">
-              Log Out
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        <NavbarContent>
+          <Image src={photoId} alt="" height={150} />
+        </NavbarContent>
       </NavbarContent>
     </Navbar>
   );

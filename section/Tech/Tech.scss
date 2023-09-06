@@ -26,3 +26,27 @@
     padding-top: 56px;
   }
 }
+@media screen and (max-width: 600px) {
+  .tech-cards {
+    background: rgb(8, 27, 57);
+    height: 1100px;
+    width: 414px;
+    left: 0;
+    top: -34%;
+    h2 {
+      margin-left: 2%;
+    }
+
+    .grid-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 33px 50px;
+      width: 380px;
+      height: 810px;
+      margin: 0 auto;
+      padding-top: 56px;
+      border-radius: 10px;
+    }
+  }
+}

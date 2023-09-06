@@ -2,8 +2,10 @@
 import Image from "next/image";
 import cv from "@/assets/img/365shots_so.png";
 import "./Header.scss";
-
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import code from "@/assets/img/618shots_so.png";
 const Header = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <section id="onlyone">
       <div className="introduction">
@@ -33,7 +35,16 @@ const Header = () => {
           </h5>
         </div>
       </div>
-      <Image className="cvshot" src={cv} alt="" height={600} />
+      {!isMobile ? (
+        <Image className="cvshot" src={cv} alt="" height={600} />
+      ) : (
+        <Image
+          className="code gradient-overlay"
+          src={code}
+          alt=""
+          width={414}
+        />
+      )}
     </section>
   );
 };

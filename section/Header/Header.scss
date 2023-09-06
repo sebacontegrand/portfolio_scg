@@ -3,7 +3,7 @@
 #onlyone {
   display: flex;
   flex-direction: row;
-  min-width: 1563px;
+  width: 1563px;
   .cvshot {
     position: relative;
 
@@ -27,7 +27,8 @@
       position: relative;
       top: -15%;
       span {
-        @include text_style_level_03_normal;
+        @include text_style_navbar_light;
+        color: grey;
       }
     }
     h1 {
@@ -40,13 +41,13 @@
     h2 {
       position: relative;
       top: -7%;
-      @include text_style_level_03_normal;
+      @include text_style_navbar_light;
     }
     h3 {
       position: relative;
       top: -59px;
       margin-left: 10px;
-      @include text_style_level_03_normal;
+      @include text_style_navbar_light;
     }
     .contact {
       position: relative;
@@ -56,8 +57,92 @@
       }
       h5 {
         margin-top: 2%;
-        color: grey;
+        color: #51617c;
         @include text_style_small;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  #onlyone {
+    display: flex;
+    flex-direction: column;
+    width: 414px;
+    margin: 270px 0;
+    background: rgb(8, 27, 57);
+
+    .code {
+      position: absolute;
+
+      left: 0px;
+      margin-top: 31%;
+      border-radius: 20px;
+
+      img {
+        z-index: -1;
+      }
+      &.gradient-overlay::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #011630 0%, rgba(0, 0, 0, 0) 100%);
+      }
+    }
+    .introduction {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20px;
+      max-width: 414px;
+      margin: 10px;
+      z-index: 99;
+      .aboutme {
+        position: relative;
+        top: -15%;
+
+        span {
+          @include text_style_level_03_normal;
+          color: #51617c;
+        }
+      }
+      h1 {
+        position: relative;
+
+        top: -33%;
+        left: 1%;
+        color: #51617c;
+        font-size: medium;
+        @include text_style_level_01_bold;
+      }
+      h2 {
+        position: relative;
+        top: -7%;
+        left: 0;
+        @include text_style_navbar_light;
+        color: #51617c;
+      }
+      h3 {
+        position: relative;
+        top: -59px;
+        margin-left: 10px;
+        @include text_style_navbar_light;
+        color: #51617c;
+      }
+      .contact {
+        position: relative;
+        top: -9%;
+        span {
+          @include text_style_level_03_normal;
+        }
+        h5 {
+          margin-top: 2%;
+          max-width: 380px;
+          color: grey;
+          @include text_style_caption_normal;
+        }
       }
     }
   }
