@@ -11,7 +11,7 @@ const Home = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <>
-      {!isMobile ? <NavBar /> : ""}
+      <NavBar />
       <section className="rowdata">
         <Header />
         <Tech />

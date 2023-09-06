@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import photoId from "@/assets/img/402shots_so.png";
 import "./NavBar.scss";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 const Home = () => {
   const handleAboutClick = () => {
     const aboutSection = document.getElementById("onlyone");
@@ -20,30 +21,41 @@ const Home = () => {
       aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
-    <Navbar className="navbar">
-      <NavbarContent className="navbar__contenido">
-        <NavbarBrand>
-          <h2>Portfolio</h2>
-        </NavbarBrand>
-        <NavbarContent>
-          <NavbarItem>
-            <Link href="https://www.github.com/sebacontegrand">Github</Link>
-          </NavbarItem>
-          <NavbarItem isActive>
-            <Link href="https://www.linkedin.com/in/sebastian-conte-grand">
-              LinkedIn
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link onClick={handleAboutClick}>About Me</Link>
-          </NavbarItem>
-        </NavbarContent>
-        <NavbarContent>
-          <Image src={photoId} alt="" height={150} />
-        </NavbarContent>
-      </NavbarContent>
-    </Navbar>
+    <>
+      {!isMobile ? (
+        <Navbar className="navbar">
+          <NavbarContent className="navbar__contenido">
+            <NavbarBrand>
+              <h2>Portfolio</h2>
+            </NavbarBrand>
+            <NavbarContent>
+              <NavbarItem>
+                <Link href="https://www.github.com/sebacontegrand">Github</Link>
+              </NavbarItem>
+              <NavbarItem isActive>
+                <Link href="https://www.linkedin.com/in/sebastian-conte-grand">
+                  LinkedIn
+                </Link>
+              </NavbarItem>
+              <NavbarItem>
+                <Link onClick={handleAboutClick}>About Me</Link>
+              </NavbarItem>
+            </NavbarContent>
+            <NavbarContent>
+              <Image src={photoId} alt="" height={150} />
+            </NavbarContent>
+          </NavbarContent>
+        </Navbar>
+      ) : (
+        <Navbar className="navbar">
+          <NavbarBrand>
+            <h2>Portfolio</h2>
+          </NavbarBrand>
+        </Navbar>
+      )}
+    </>
   );
 };
 export default Home;
